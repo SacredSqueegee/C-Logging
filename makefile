@@ -31,7 +31,8 @@ ${APP}: ${OBJ_FILES}
 .PHONY: run
 run: ${APP}
 	@echo Running ${APP} ...
-	@./${APP} ${ROM_NAME} && echo "${APP}" exited with: $$?
+	@echo
+	@./${APP} ${ROM_NAME} && echo && echo "${APP}" exited with: $$?
 
 
 .PHONY: clean

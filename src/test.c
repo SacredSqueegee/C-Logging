@@ -3,10 +3,8 @@
 
 int main()
 {
-    setTerminalColor(DARK_BLUE);
     printf("Hello, world!\n");
-    setTerminalColor(RESET);
-    printf("after...\n");
-
+    Log_MSG(LOG_INFO, "%s", "This is a test message...");
+    Log_Nest(LOG_ERROR, 0, "I'm a nested %s", "log message...");
     return 0;
 }
