@@ -44,7 +44,9 @@ int main()
 {
     Log_MSG(LOG_INFO, "%s", "This is a test message...");
     Log_Nest(LOG_ERROR, 0, "I'm a nested %s", "log message...");
-    
+
     return 0;
 }
 ```
+
+To compile: `clang test.c -L/path/to/liblogging.a -llogging -o test.out`

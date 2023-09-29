@@ -96,7 +96,7 @@ static LogType_t ValidateLogType(LogType_t LogType)
 // Public API Functions
 // =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
 
-int Log_MSG(LogType_t logType, const char* msgFormat, ...)
+LogType_t Log_MSG(LogType_t logType, const char* msgFormat, ...)
 {
     if (g_LogState.spaceAbove)
         printf("\n");
@@ -121,7 +121,7 @@ int Log_MSG(LogType_t logType, const char* msgFormat, ...)
 }
 
 
-int Log_Nest(LogType_t logType, uint8_t nestingLevel, const char* msgFormat, ...)
+LogType_t Log_Nest(LogType_t logType, uint8_t nestingLevel, const char* msgFormat, ...)
 {
     // Prevent reading invalid memory when bad log type is passed in
     logType = ValidateLogType(logType);

@@ -35,6 +35,17 @@ run: ${APP}
 	@./${APP} ${ROM_NAME} && echo && echo "${APP}" exited with: $$?
 
 
+.PHONY: genlib
+genlib: ./build/logging.o
+	rm -rf ./release
+	mkdir ./release
+	mkdir ./release/liblogging
+	mkdir ./release/liblogging/lib
+	mkdir ./release/liblogging/include
+	cp ./src/lib_logging/logging.h ./release/liblogging/include
+	ar -rcs ./release/liblogging/lib/liblogging.a ./build/logging.o
+
+
 .PHONY: clean
 clean:
 	rm -rf $(OBJ_FILES) $(APP)
