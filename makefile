@@ -44,6 +44,7 @@ genlib: ./build/logging.o
 	mkdir ./release/liblogging/include
 	cp ./src/lib_logging/logging.h ./release/liblogging/include
 	ar -rcs ./release/liblogging/lib/liblogging.a ./build/logging.o
+	cd ./release && tar -czvf liblogging.tar.gz liblogging
 
 
 .PHONY: clean
