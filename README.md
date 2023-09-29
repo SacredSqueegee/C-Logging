@@ -50,3 +50,7 @@ int main()
 ```
 
 To compile: `clang test.c -L/path/to/liblogging.a -llogging -o test.out`
+
+Terminal output:
+
+![Screenshot 2023-09-29 at 2 06 13 PM](https://github.com/SacredSqueegee/C-Logging/assets/16947007/27043d15-d57e-4f0a-9dc1-84c38eb8a1b7)
