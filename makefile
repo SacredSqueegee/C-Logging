@@ -50,3 +50,4 @@ genlib: ./build/logging.o
 clean:
 	rm -rf $(OBJ_FILES) $(APP)
 	rm -rf ./src/*.gch ./src/lib_logging/*.gch
+	rm -rf ./release
