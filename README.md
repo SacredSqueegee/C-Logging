@@ -1,2 +1,2 @@
 # C-Logging
-Logging Library for C/C++
+Lightweight terminal logger written in C
